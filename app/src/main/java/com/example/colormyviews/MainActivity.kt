@@ -4,6 +4,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,5 +23,16 @@ class MainActivity : AppCompatActivity() {
             R.id.box_five_text -> view.setBackgroundColor(Color.BLUE)
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
+    }
+
+    private fun setListeners() {
+
+        val boxOneText = findViewById<TextView>(R.id.box_one_text)
+        val boxTwoText = findViewById<TextView>(R.id.box_two_text)
+        val boxThreeText = findViewById<TextView>(R.id.box_three_text)
+        val boxFourText = findViewById<TextView>(R.id.box_four_text)
+        val boxFiveText = findViewById<TextView>(R.id.box_five_text)
+
+        val rootConstraintLayout = findViewById<View>(R.id.constraint_layout)
     }
 }
